@@ -22,7 +22,7 @@ Stop copy-pasting commands. Navigate everything from one clean menu.
 
 - Bash 4+
 - `whiptail` (ships with most Debian/Ubuntu installs, otherwise: `sudo apt install whiptail`)
-- [Hermes](https://github.com/nate-d-olson/hermes) installed and configured for the current user
+- [Hermes] (https://github.com/nousresearch/hermes-agent) installed and configured for the current user
 
 ---
 
