@@ -368,19 +368,17 @@ menu_gateway_all() {
 
         case "$CHOICE" in
             1)
-                local CMD=""
+                local CMD="hermes profile use default"
                 for P in "${PROFILES[@]}"; do
-                    [ -n "$CMD" ] && CMD+=" && "
-                    CMD+="hermes gateway stop --profile $P"
+                    CMD+=" && hermes gateway stop --profile $P"
                 done
                 run "$CMD"
                 pause
                 ;;
             2)
-                local CMD=""
+                local CMD="hermes profile use default"
                 for P in "${PROFILES[@]}"; do
-                    [ -n "$CMD" ] && CMD+=" && "
-                    CMD+="hermes gateway restart --profile $P"
+                    CMD+=" && hermes gateway restart --profile $P"
                 done
                 run "$CMD"
                 pause
