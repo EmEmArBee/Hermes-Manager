@@ -136,7 +136,7 @@ Backups are saved **in the same directory as the source file**, with a date-stam
 
 ## License
 
-MIT — do whatever you want with it.
+ GNU GPLv3
 
 ---
 
