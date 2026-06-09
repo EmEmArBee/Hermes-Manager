@@ -1,5 +1,6 @@
-# Hermes-Manager
-An interactive TUI manager for [Hermes] (https://github.com/nousresearch/hermes-agent) — built with `whiptail`, zero dependencies beyond what ships with Debian/Ubuntu.
+# ⚡ hermes-manager
+
+An interactive TUI manager for [Hermes](https://github.com/nousresearch/hermes-agent) — built with `whiptail`, zero dependencies beyond what ships with Debian/Ubuntu.
 
 Stop copy-pasting commands. Navigate everything from one clean menu.
 
@@ -22,7 +23,7 @@ Stop copy-pasting commands. Navigate everything from one clean menu.
 
 - Bash 4+
 - `whiptail` (ships with most Debian/Ubuntu installs, otherwise: `sudo apt install whiptail`)
-- [Hermes] (https://github.com/nousresearch/hermes-agent) installed and configured for the current user
+- [Hermes](https://github.com/nousresearch/hermes-agent) installed and configured for the current user
 
 ---
 
@@ -84,8 +85,8 @@ hermes-manager
 ├── 🔄  Hermes Update
 │
 ├── 🌐  Gateway — Stop / Restart ALL
-│   ├── ⏹️  Stop ALL profiles
-│   └── 🔁  Restart ALL profiles
+│   ├── ⏹️  Stop ALL  — switches to default, then stops every profile
+│   └── 🔁  Restart ALL — switches to default, then restarts every profile
 │
 ├── ⚙️   Hermes General Commands
 │   ├── Start chat
@@ -126,6 +127,7 @@ Backups are saved **in the same directory as the source file**, with a date-stam
 
 ## Notes
 
+- **Gateway ALL** always runs `hermes profile use default` first, then chains stop/restart for every discovered profile with `&&`. This matches the correct Hermes behaviour: switching to default before issuing gateway commands ensures they execute reliably in sequence.
 - The script uses `nano` as the default editor for all file editing. If you prefer a different editor, change the `nano` calls in the `menu_edit_profile` function.
 - REMOVE operations require explicit confirmation and display a warning before deleting. There is no undo — always backup first.
 - The SOUL.md import overwrites the destination file. A confirmation dialog is shown before proceeding.
@@ -134,7 +136,7 @@ Backups are saved **in the same directory as the source file**, with a date-stam
 
 ## License
 
-GNU GPLv3
+MIT — do whatever you want with it.
 
 ---
 
