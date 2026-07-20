@@ -4,6 +4,8 @@ An interactive TUI manager for [Hermes](https://github.com/nousresearch/hermes-a
 
 Stop copy-pasting commands. Navigate everything from one clean menu.
 
+[![License](https://img.shields.io/badge/license-GNU GPLv3-green)](LICENSE)
+
 ---
 
 ## Features
